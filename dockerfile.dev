@@ -1,10 +1,5 @@
 FROM openjdk:18-jdk-buster as dev
 
-# Create a non-root user
-RUN addgroup -S spring && adduser -S spring -G spring
-# Execute as non-root
-USER spring:spring
-
 WORKDIR /work
 
 COPY mvnw /work/mvnw
